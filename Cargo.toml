@@ -1,0 +1,14 @@
+[package]
+name = "elf"
+version = "0.1.0"
+authors = ["nathanfaucett <nathanfaucett@gmail.com>"]
+
+keywords = ["elf", "executable", "extensible", "linkable", "format"]
+description = "Executable and Linkable Format"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/nathanfaucett/rs-memory.git"
+homepage = "https://github.com/nathanfaucett/rs-memory"
+
+[dependencies]
+goblin = "0.0.2"
