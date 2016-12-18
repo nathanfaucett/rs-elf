@@ -11,4 +11,4 @@ repository = "https://github.com/nathanfaucett/rs-memory.git"
 homepage = "https://github.com/nathanfaucett/rs-memory"
 
 [dependencies]
-goblin = "0.0.2"
+goblin = "0.0.6"

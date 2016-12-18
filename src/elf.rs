@@ -1,6 +1,6 @@
 use collections::{String, Vec};
-use core::ptr;
 
+use core::ptr;
 
 #[cfg(target_arch = "x86")]
 use goblin::elf32::{header, program_header};
