@@ -14,7 +14,7 @@ pub struct Elf<'a> {
 }
 
 impl<'a> Elf<'a> {
-
+    #[inline]
     pub fn from(data: &'a [u8]) -> Result<Elf<'a>, String> {
         if data.len() < header::SIZEOF_EHDR {
             Err(format!("Elf: Not enough data: {} < {}", data.len(), header::SIZEOF_EHDR))
@@ -26,7 +26,7 @@ impl<'a> Elf<'a> {
             Ok(Elf { data: data })
         }
     }
-
+    #[inline]
     pub unsafe fn load_segments(&self) -> Vec<program_header::ProgramHeader> {
         let mut segments = Vec::new();
 
@@ -42,7 +42,7 @@ impl<'a> Elf<'a> {
 
         segments
     }
-
+    #[inline]
     pub unsafe fn entry(&self) -> usize {
         let header = &*(self.data.as_ptr() as usize as *const header::Header);
         header.e_entry as usize
